@@ -1,0 +1,50 @@
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+     background-color: rgb(0, 0, 0);
+     
+}
+.menu-itens{
+    display: flex;
+    list-style: none;
+    margin-top: 15px;
+    align-items: center;
+}
+.menu-itens li{
+    margin-right: 16px;
+    
+}
+.menu-itens a{
+   text-decoration: none;
+   color: antiquewhite;
+   font-size: 1.0rem;
+   font-family: 'Segoe UI';
+   font-weight: bold;
+}
+.menu-itens a:hover{
+    color: rgb(255, 233, 159);
+    cursor: pointer;
+    text-decoration:underline;
+}
+footer{
+    background-color: rgb(0, 0, 0);
+  /* width: 99%; */
+  height: 200px;
+  border: solid rgb(0, 0, 0);
+  color: white;
+  text-align: center;
+}
+main{
+    height:900px;
+    /* AQUI ALTERA TAMANHO DO FUNDO  */
+} 
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-family: 'Segoe UI';
+    font-weight: 750;
+    font-style: italic;
+    text-align: center;
+    margin-left: 4px;
+}

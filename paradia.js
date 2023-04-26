@@ -1,26 +1,39 @@
-let classe = []
-let quantidade = []
-let preco = []
-
+let parcial = document.getElementById('parcial')
 let total = document.getElementById('total')
-let calcular = document.getElementById('calcular')
+let vetor = document.getElementById('vetor')
+let valor_compra = document.getElementById('valor_compra')
 
-calcular.addEventListener('click', ()=>{
-    let produto = document.getElementById('produto')
-    let qtd_produto = document.getElementById('qtd_produto').value
+let tipo_produto = []
+let quantidade = []
+let preco_produtos = []
+
+
+parcial.addEventListener('click', ()=>{
+    let produto = document.getElementById('produto').value
+    let qtde_produtos = document.getElementById('qtde_produtos').value
     let preco_produto = document.getElementById('preco_produto').value
-    let soma = 0.0
 
-    classe.push(produto)
-    quantidade.push(qtd_produto)
-    preco.push(preco_produto)
+    console.log(tipo_produto)
+
+    tipo_produto.push(produto)
+    quantidade.push(qtde_produtos)
+    preco_produtos.push(preco_produto)
+
+    // console.log(tipo_produto)
+    // console.log(quantidade)
+    // console.log(preco_produtos)
     
-    console.log(produto)
-    console.log(quantidade)
-    console.log(preco)
-
-    for(i=0; i<preco.length; i++){
-        soma = soma + (quantidade[i] * preco[i])
+    let soma = 0.0
+    for(i=0;i<preco_produtos.length;i++){
+        soma = soma + (quantidade[i]*preco_produtos[i])
     }
-        total.innerHTML = 'Total da compra: R$' + soma
+   
+    vetor.innerHTML = ''
+    for(i=0;i<preco_produtos.length;i++){
+        vetor.innerHTML += 'Produto = ' + tipo_produto[i] + '&emsp;'
+        vetor.innerHTML += 'Quantidade = ' + quantidade[i] + '&emsp;'
+        vetor.innerHTML += 'Preço produto = R$ ' + preco_produtos[i] + '<br>'
+    }
+    
+
 })
